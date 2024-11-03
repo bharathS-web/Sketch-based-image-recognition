@@ -11,7 +11,6 @@ A deep learning model for recognizing hand-drawn sketches using the Quick Draw d
 - [Installation](#installation)
 - [Usage](#usage)
 - [Results](#results)
-- [Contributing](#contributing)
 
 ## Overview
 This project implements a Convolutional Neural Network (CNN) for classifying hand-drawn sketches from the Quick Draw dataset. The model uses a multi-layer architecture combining convolutional, pooling, and dense layers to achieve robust sketch recognition capabilities.
@@ -109,7 +108,8 @@ streamlit run quickdraw.py
 
 1. **Data Preparation**
    - Download the Quick Draw dataset
-   - Place the data in the `data/` directory
+   - Place the data in the `Data/` directory
+   - Load the data from `Data/`
    - Run preprocessing scripts if needed
 
 2. **Model Training**
@@ -139,15 +139,3 @@ Model performance metrics and visualizations will be added after training comple
 - Training/validation accuracy curves
 - Confusion matrix
 - Example predictions
-
-## Contributing
-Contributions are welcome! Please feel free to submit a Pull Request. For major changes:
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## License
-[Choose an appropriate license]
