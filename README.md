@@ -20,6 +20,8 @@ The goal of this project is to build a robust image recognition model capable of
 
 The Quick Draw dataset contains millions of labeled sketches across various categories, drawn by users worldwide. It provides a unique challenge due to its simplicity and variation in drawing styles.
 
+[Quick Draw Dataset](https://console.cloud.google.com/storage/browser/quickdraw_dataset/full/numpy_bitmap;tab=objects?pli=1&prefix=&forceOnObjectsSortingFiltering=false)
+
 ## Model Training
 
 The model training pipeline is set up to:
