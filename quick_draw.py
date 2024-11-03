@@ -7,7 +7,7 @@ from PIL import Image
 import matplotlib.pyplot as plt
 
 # Define the model path
-model_path = 'model50.keras'
+model_path = 'model.keras'
 
 # Check if the model file exists
 if os.path.exists(model_path):
@@ -21,9 +21,11 @@ else:
     st.error(f"Model file not found: {model_path}")
     model = None
 
-class_names = ['Apple', 'Bat', 'Bus', 'Car', 'Circle', 'Crown', 'Donut', 'Eye', 'Face', 'Fork', 'Key', 'Knife']
+f = open("categories.txt","r")
+classes = f.readlines()
+f.close()
 
-class_names = ['Airplane', 'Alarm Clock', 'Apple', 'Banana', 'Basketball', 'Car', 'Carrot', 'Cat', 'Circle', 'Clock', 'Cloud', 'Cooler', 'Eye', 'Fish', 'Flower', 'Fork', 'Grapes', 'Grass', 'Hammer', 'Headphones', 'Helicopter', 'Hexagon', 'Hot Air Balloon', 'House', 'Key', 'Knife', 'Ladder', 'Octagon', 'Onion', 'Palm Tree', 'Pants', 'Peanut', 'Pencil', 'Pizza', 'Rain', 'Rainbow', 'Smiley Face', 'Snake', 'Soccer Ball', 'Square', 'Star', 'Sun', 'Tooth', 'Toothbrush', 'Toothpaste', 'Traffic Light', 'Tree', 'Triangle', 'Truck', 'Umbrella']
+class_names = [c.replace('\n','').replace(' ','_') for c in classes]
 
 # Initialize the drawing board dimensions
 WIDTH, HEIGHT = 28, 28
@@ -35,8 +37,8 @@ def predict_drawing(image, top_k=5):
     return [(class_names[i], pred[i]) for i in top_indices]
 
 # Streamlit UI
-st.title("Quick Draw Game ")
-st.write("Draw something on the board and press 'Predict' to see the result.")
+st.title("Quick Draw Game ✈️")
+st.write("Draw something on the board...")
 
 # Initialize session state for canvas and prediction result
 if 'canvas_data' not in st.session_state:
@@ -63,11 +65,6 @@ with col1:
     # Store the canvas data in session state
     if canvas_result.image_data is not None:
         st.session_state.canvas_data = canvas_result.image_data
-
-    # Reset button
-    if st.button("Reset"):
-        st.session_state.canvas_data = None  # Clear the canvas data
-        st.session_state.prediction_result = None  # Clear prediction result
 
 # Create the prediction area in the second column
 with col2:
