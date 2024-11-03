@@ -1,4 +1,5 @@
-numpy==1.23.5
-tensorflow==2.12.0
-tensorflowjs==4.10.0
-h5py==3.8.0
+tensorflow
+numpy
+streamlit
+matplotlib
+pillow
