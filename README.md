@@ -75,6 +75,9 @@ Dense: 128 units with ReLU activation
 Output: Dense layer with num_classes units and softmax activation
 
 # Architecture Diagram
+# Model Architecture
+
+```mermaid
 flowchart TD
     input[Input Layer] --> conv1[Conv2D: 16 filters, 3x3]
     conv1 --> bn1[BatchNormalization]
