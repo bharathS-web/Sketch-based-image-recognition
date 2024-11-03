@@ -96,6 +96,7 @@ flowchart TD
     
     dropout --> dense1[Dense: 128 units]
     dense1 --> output[Dense: num_classes units]
+```
 
 ## Model Training
 
