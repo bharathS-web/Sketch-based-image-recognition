@@ -6,7 +6,6 @@ This project involves developing a sketch-based image recognition model trained 
 
 - [Introduction](#introduction)
 - [Dataset](#dataset)
-- [Project Structure](#project-structure)
 - [Model Training](#model-training)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -21,14 +20,7 @@ The goal of this project is to build a robust image recognition model capable of
 
 The Quick Draw dataset contains millions of labeled sketches across various categories, drawn by users worldwide. It provides a unique challenge due to its simplicity and variation in drawing styles.
 
-## Project Structure
-├── Data/                   # Folder containing .npy data files
-├── modeltrain.ipynb        # Jupyter notebook for model training and experimentation
-├── quick_draw.py           # Streamlit-based front end for user interaction
-├── requirements.txt        # Python dependencies
-└── README.md               # Project documentation
-
-  ## Model Training
+## Model Training
 
 The model training pipeline is set up to:
 
