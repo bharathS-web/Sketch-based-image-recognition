@@ -24,10 +24,10 @@ The Quick Draw dataset contains millions of labeled sketches across various cate
 
 ## CNN Architecture
 
-# model
+#### model
 This repository contains a Convolutional Neural Network (CNN) implementation using Keras. The model is designed for image classification tasks with a multi-layer architecture combining convolutional, pooling, and dense layers.
 
-# Architecture Details
+#### Architecture Details
 ```bash
    model = keras.Sequential([
     layers.Conv2D(16, (3, 3), padding='same', activation='relu', input_shape=input_shape),
@@ -50,25 +50,25 @@ This repository contains a Convolutional Neural Network (CNN) implementation usi
 ])
 ```
 
-# Layer-by-Layer Description
-# Convolutional Blocks
+#### Layer-by-Layer Description
+##### Convolutional Blocks
 
-# First Convolutional Block
+###### First Convolutional Block
 Conv2D: 16 filters, 3×3 kernel, same padding, ReLU activation
 Batch Normalization
 MaxPooling: 2×2 pool size
 
-# Second Convolutional Block
+###### Second Convolutional Block
 Conv2D: 32 filters, 3×3 kernel, same padding, ReLU activation
 Batch Normalization
 MaxPooling: 2×2 pool size
 
-# Third Convolutional Block
+###### Third Convolutional Block
 Conv2D: 64 filters, 3×3 kernel, same padding, ReLU activation
 Batch Normalization
 MaxPooling: 2×2 pool size
 
-# Classification Layers
+##### Classification Layers
 Flatten: Converts 3D feature maps to 1D feature vectors
 Dropout: 50% dropout rate for regularization
 Dense: 128 units with ReLU activation
