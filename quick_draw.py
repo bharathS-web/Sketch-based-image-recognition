@@ -6,12 +6,13 @@ from streamlit_drawable_canvas import st_canvas
 from PIL import Image
 import matplotlib.pyplot as plt
 
-# Define the model path
+# Model path
 model_path = 'model.keras'
 
 # Check if the model file exists
 if os.path.exists(model_path):
     try:
+        # Load Model
         model = tf.keras.models.load_model(model_path)
         print("Model loaded successfully.")
     except Exception as e:
