@@ -6,7 +6,6 @@ from streamlit_drawable_canvas import st_canvas
 from PIL import Image
 import matplotlib.pyplot as plt
 
-
 # Model path
 model_path = 'model.keras'
 
