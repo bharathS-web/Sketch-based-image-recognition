@@ -11,7 +11,7 @@ A deep learning model for recognizing hand-drawn sketches using the Quick Draw d
 - [Installation](#installation)
 - [Usage](#usage)
 - [Results](#results)
-
+ 
 ## Overview
 This project implements a Convolutional Neural Network (CNN) for classifying hand-drawn sketches from the Quick Draw dataset. The model uses a multi-layer architecture combining convolutional, pooling, and dense layers to achieve robust sketch recognition capabilities.
 
